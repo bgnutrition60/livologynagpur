@@ -27,776 +27,184 @@
   }
 
   /* TICKER */
-  .ticker {
-    background: var(--red);
-    color: white;
-    padding: 10px 0;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .ticker-inner {
-    display: inline-block;
-    animation: ticker 22s linear infinite;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-  }
-  @keyframes ticker {
-    0% { transform: translateX(100vw); }
-    100% { transform: translateX(-100%); }
-  }
+  .ticker { background: var(--red); color: white; padding: 10px 0; overflow: hidden; white-space: nowrap; }
+  .ticker-inner { display: inline-block; animation: ticker 22s linear infinite; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; }
+  @keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
 
   /* HERO */
-  .hero {
-    background: var(--white);
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-top {
-    background: var(--red);
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-  }
-
-  .event-badge {
-    background: white;
-    color: var(--red);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .hero-body {
-    padding: 48px 24px 0;
-    position: relative;
-  }
-
-  .hero-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #FFF0F0;
-    border: 1px solid #FFD0D0;
-    color: var(--red);
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    animation: fadeUp 0.6s ease both;
-  }
-
-  .pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--red);
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(0.8); }
-  }
-
-  .hero-headline {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 7vw, 52px);
-    font-weight: 900;
-    line-height: 1.1;
-    color: var(--text);
-    margin-bottom: 8px;
-    animation: fadeUp 0.7s ease 0.1s both;
-  }
-
-  .hero-headline span {
-    color: var(--red);
-    display: block;
-  }
-
-  .hero-sub {
-    font-size: 16px;
-    color: var(--gray);
-    line-height: 1.6;
-    margin-bottom: 32px;
-    max-width: 520px;
-    animation: fadeUp 0.7s ease 0.2s both;
-  }
+  .hero { background: var(--white); padding: 0; position: relative; overflow: hidden; }
+  .hero-top { background: var(--red); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-family: 'Playfair Display', serif; font-size: 22px; color: white; font-weight: 700; letter-spacing: 0.02em; }
+  .event-badge { background: white; color: var(--red); padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .hero-body { padding: 48px 24px 0; position: relative; }
+  .hero-label { display: inline-flex; align-items: center; gap: 8px; background: #FFF0F0; border: 1px solid #FFD0D0; color: var(--red); padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; animation: fadeUp 0.6s ease both; }
+  .pulse-dot { width: 8px; height: 8px; background: var(--red); border-radius: 50%; animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
+  .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(32px, 7vw, 52px); font-weight: 900; line-height: 1.1; color: var(--text); margin-bottom: 8px; animation: fadeUp 0.7s ease 0.1s both; }
+  .hero-headline span { color: var(--red); display: block; }
+  .hero-sub { font-size: 16px; color: var(--gray); line-height: 1.6; margin-bottom: 32px; max-width: 520px; animation: fadeUp 0.7s ease 0.2s both; }
 
   /* STATS ROW */
-  .stats-row {
-    display: flex;
-    gap: 0;
-    border: 2px solid var(--red);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 32px;
-    animation: fadeUp 0.7s ease 0.3s both;
-  }
-
-  .stat-item {
-    flex: 1;
-    padding: 16px 12px;
-    text-align: center;
-    border-right: 1px solid #FFD0D0;
-    background: var(--off-white);
-  }
-
+  .stats-row { display: flex; gap: 0; border: 2px solid var(--red); border-radius: 12px; overflow: hidden; margin-bottom: 32px; animation: fadeUp 0.7s ease 0.3s both; }
+  .stat-item { flex: 1; padding: 16px 12px; text-align: center; border-right: 1px solid #FFD0D0; background: var(--off-white); }
   .stat-item:last-child { border-right: none; }
-
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 900;
-    color: var(--red);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .stat-label {
-    font-size: 10px;
-    color: var(--gray);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 1.3;
-  }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 900; color: var(--red); line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 10px; color: var(--gray); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.3; }
 
   /* CTA HERO */
-  .cta-hero {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 40px;
-    animation: fadeUp 0.7s ease 0.4s both;
-  }
-
-  .btn-primary {
-    background: var(--red);
-    color: white;
-    border: none;
-    padding: 18px 24px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.2s;
-    letter-spacing: 0.02em;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-primary::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.1);
-    transform: translateX(-100%);
-    transition: transform 0.3s;
-  }
-
+  .cta-hero { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; animation: fadeUp 0.7s ease 0.4s both; }
+  .btn-primary { background: var(--red); color: white; border: none; padding: 18px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all 0.2s; letter-spacing: 0.02em; position: relative; overflow: hidden; }
+  .btn-primary::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.1); transform: translateX(-100%); transition: transform 0.3s; }
   .btn-primary:hover::after { transform: translateX(0); }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,30,42,0.3); }
-
-  .btn-secondary {
-    background: white;
-    color: var(--red);
-    border: 2px solid var(--red);
-    padding: 16px 24px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.2s;
-  }
-
+  .btn-secondary { background: white; color: var(--red); border: 2px solid var(--red); padding: 16px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all 0.2s; }
   .btn-secondary:hover { background: #FFF0F0; }
-
-  .seats-note {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--red);
-    font-weight: 500;
-  }
+  .seats-note { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: var(--red); font-weight: 500; }
 
   /* DIVIDER */
-  .divider {
-    height: 4px;
-    background: linear-gradient(90deg, var(--red) 0%, var(--red-light) 50%, var(--red) 100%);
-  }
+  .divider { height: 4px; background: linear-gradient(90deg, var(--red) 0%, var(--red-light) 50%, var(--red) 100%); }
 
   /* EVENT DETAILS */
-  .section {
-    padding: 40px 24px;
-  }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: #FFD0D0;
-  }
-
-  .event-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-
-  .event-card {
-    background: var(--off-white);
-    border: 1px solid #FFD0D0;
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
-  }
-
-  .event-card-icon {
-    font-size: 28px;
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  .event-card-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .event-card-sub {
-    font-size: 11px;
-    color: var(--gray);
-    line-height: 1.4;
-  }
-
-  .event-card-full {
-    background: var(--red);
-    border-radius: 10px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    color: white;
-  }
-
-  .event-card-full-icon {
-    font-size: 32px;
-    flex-shrink: 0;
-  }
-
-  .event-card-full-title {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-
-  .event-card-full-sub {
-    font-size: 12px;
-    opacity: 0.85;
-    line-height: 1.4;
-  }
+  .section { padding: 40px 24px; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: #FFD0D0; }
+  .event-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .event-card { background: var(--off-white); border: 1px solid #FFD0D0; border-radius: 10px; padding: 16px; text-align: center; }
+  .event-card-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+  .event-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .event-card-sub { font-size: 11px; color: var(--gray); line-height: 1.4; }
+  .event-card-full { background: var(--red); border-radius: 10px; padding: 16px 20px; display: flex; align-items: center; gap: 16px; color: white; }
+  .event-card-full-icon { font-size: 32px; flex-shrink: 0; }
+  .event-card-full-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .event-card-full-sub { font-size: 12px; opacity: 0.85; line-height: 1.4; }
 
   /* WHAT YOU LEARN */
-  .learn-section {
-    background: var(--text);
-    padding: 40px 24px;
-    color: white;
-  }
-
-  .learn-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--red-light);
-    margin-bottom: 8px;
-  }
-
-  .learn-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 24px;
-    line-height: 1.2;
-    color: white;
-  }
-
-  .learn-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 28px;
-  }
-
-  .learn-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: rgba(255,255,255,0.85);
-  }
-
-  .learn-check {
-    width: 20px;
-    height: 20px;
-    background: var(--red);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-    font-size: 11px;
-  }
+  .learn-section { background: var(--text); padding: 40px 24px; color: white; }
+  .learn-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-light); margin-bottom: 8px; }
+  .learn-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; color: white; }
+  .learn-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .learn-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.85); }
+  .learn-check { width: 20px; height: 20px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 11px; }
 
   /* SPEAKERS */
-  .speakers-section {
-    padding: 40px 24px;
-    background: var(--white);
-  }
-
-  .speakers-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .speaker-card {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    background: var(--off-white);
-    border: 1px solid #FFD0D0;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .speaker-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--red);
-  }
-
-  .speaker-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--red);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: white;
-    flex-shrink: 0;
-    border: 3px solid white;
-    box-shadow: 0 4px 12px rgba(196,30,42,0.2);
-  }
-
-  .speaker-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .speaker-title {
-    font-size: 12px;
-    color: var(--red);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 6px;
-  }
-
-  .speaker-bio {
-    font-size: 12px;
-    color: var(--gray);
-    line-height: 1.5;
-  }
+  .speakers-section { padding: 40px 24px; background: var(--white); }
+  .speakers-grid { display: flex; flex-direction: column; gap: 16px; }
+  .speaker-card { display: flex; gap: 16px; align-items: center; background: var(--off-white); border: 1px solid #FFD0D0; border-radius: 12px; padding: 20px; position: relative; overflow: hidden; }
+  .speaker-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--red); }
+  .speaker-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: white; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 12px rgba(196,30,42,0.2); }
+  .speaker-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .speaker-title { font-size: 12px; color: var(--red); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .speaker-bio { font-size: 12px; color: var(--gray); line-height: 1.5; }
 
   /* ALERT SECTION */
-  .alert-section {
-    background: var(--red);
-    padding: 40px 24px;
-    text-align: center;
-    color: white;
-  }
-
-  .alert-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-  }
-
-  .alert-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 900;
-    margin-bottom: 12px;
-    line-height: 1.2;
-  }
-
-  .alert-body {
-    font-size: 15px;
-    opacity: 0.9;
-    line-height: 1.6;
-    margin-bottom: 28px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .btn-white {
-    background: white;
-    color: var(--red);
-    border: none;
-    padding: 18px 24px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    transition: all 0.2s;
-    margin-bottom: 12px;
-  }
-
+  .alert-section { background: var(--red); padding: 40px 24px; text-align: center; color: white; }
+  .alert-icon { font-size: 48px; margin-bottom: 16px; }
+  .alert-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; margin-bottom: 12px; line-height: 1.2; }
+  .alert-body { font-size: 15px; opacity: 0.9; line-height: 1.6; margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .btn-white { background: white; color: var(--red); border: none; padding: 18px 24px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all 0.2s; margin-bottom: 12px; }
   .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
 
-  .whatsapp-btn {
-    background: #25D366;
-    color: white;
-    border: none;
-    padding: 16px 24px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: all 0.2s;
-  }
-
-  .whatsapp-btn:hover { transform: translateY(-2px); }
-
   /* DATE STRIP */
-  .date-strip {
-    background: var(--text);
-    padding: 20px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .date-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .date-box {
-    background: var(--red);
-    color: white;
-    padding: 8px 14px;
-    border-radius: 8px;
-    text-align: center;
-    flex-shrink: 0;
-  }
-
-  .date-day {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 900;
-    line-height: 1;
-  }
-
-  .date-month {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.9;
-  }
-
-  .date-text-label {
-    font-size: 12px;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 4px;
-  }
-
-  .date-text-value {
-    font-size: 15px;
-    color: white;
-    font-weight: 600;
-    line-height: 1.4;
-  }
+  .date-strip { background: var(--text); padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .date-info { display: flex; align-items: center; gap: 12px; }
+  .date-box { background: var(--red); color: white; padding: 8px 14px; border-radius: 8px; text-align: center; flex-shrink: 0; }
+  .date-day { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; line-height: 1; }
+  .date-month { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.9; }
+  .date-text-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .date-text-value { font-size: 15px; color: white; font-weight: 600; line-height: 1.4; }
 
   /* FREE BADGE */
-  .free-badge {
-    background: var(--red);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    flex-shrink: 0;
-  }
+  .free-badge { background: var(--red); color: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; flex-shrink: 0; }
 
   /* FOOTER */
-  footer {
-    background: white;
-    padding: 24px;
-    text-align: center;
-    border-top: 1px solid #FFD0D0;
-  }
-
-  .footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--red);
-    margin-bottom: 6px;
-  }
-
-  .footer-text {
-    font-size: 12px;
-    color: var(--gray);
-  }
+  footer { background: white; padding: 24px; text-align: center; border-top: 1px solid #FFD0D0; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--red); margin-bottom: 6px; }
+  .footer-text { font-size: 12px; color: var(--gray); }
 
   /* FORM */
-  .form-section {
-    padding: 40px 24px;
-    background: var(--light-gray);
-  }
-
-  .form-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 6px;
-    text-align: center;
-  }
-
-  .form-sub {
-    font-size: 13px;
-    color: var(--gray);
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .form-group {
-    margin-bottom: 14px;
-  }
-
-  .form-input {
-    width: 100%;
-    padding: 14px 16px;
-    border: 2px solid #E5E7EB;
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: 'DM Sans', sans-serif;
-    background: white;
-    transition: border-color 0.2s;
-    outline: none;
-    color: var(--text);
-  }
-
+  .form-section { padding: 40px 24px; background: var(--light-gray); }
+  .form-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 6px; text-align: center; }
+  .form-sub { font-size: 13px; color: var(--gray); text-align: center; margin-bottom: 24px; }
+  .form-group { margin-bottom: 14px; }
+  .form-input { width: 100%; padding: 14px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 15px; font-family: 'DM Sans', sans-serif; background: white; transition: border-color 0.2s; outline: none; color: var(--text); }
   .form-input:focus { border-color: var(--red); }
   .form-input::placeholder { color: #9CA3AF; }
-
-  .form-submit {
-    width: 100%;
-    background: var(--red);
-    color: white;
-    border: none;
-    padding: 18px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-top: 4px;
-  }
-
+  .form-submit { width: 100%; background: var(--red); color: white; border: none; padding: 18px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 4px; }
   .form-submit:hover { background: var(--red-dark); transform: translateY(-1px); }
 
   /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
   /* STICKY CTA */
-  .sticky-cta {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 2px solid var(--red);
-    padding: 12px 24px;
-    display: flex;
-    gap: 10px;
-    z-index: 999;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-  }
-
-  .sticky-text {
-    font-size: 11px;
-    color: var(--gray);
-    line-height: 1.3;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .sticky-text strong {
-    color: var(--text);
-    font-size: 13px;
-  }
-
-  .sticky-btn {
-    background: var(--red);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
-    cursor: pointer;
-    white-space: nowrap;
-    flex-shrink: 0;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-
+  .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 2px solid var(--red); padding: 12px 24px; display: flex; gap: 10px; z-index: 999; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
+  .sticky-text { font-size: 11px; color: var(--gray); line-height: 1.3; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .sticky-text strong { color: var(--text); font-size: 13px; }
+  .sticky-btn { background: var(--red); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; white-space: nowrap; flex-shrink: 0; text-decoration: none; display: flex; align-items: center; }
   .spacer { height: 80px; }
 
   /* SYMPTOMS ROW */
-  .symptoms-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
-  .symptom-chip {
-    background: white;
-    border: 1px solid #FFD0D0;
-    border-radius: 8px;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  .symptom-icon {
-    font-size: 20px;
-    flex-shrink: 0;
-  }
-
-  .urgency-bar {
-    background: #FFF0F0;
-    border: 1px solid #FFD0D0;
-    border-radius: 8px;
-    padding: 14px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
+  .symptoms-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+  .symptom-chip { background: white; border: 1px solid #FFD0D0; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; color: var(--text); }
+  .symptom-icon { font-size: 20px; flex-shrink: 0; }
+  .urgency-bar { background: #FFF0F0; border: 1px solid #FFD0D0; border-radius: 8px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
   .urgency-icon { font-size: 24px; flex-shrink: 0; }
   .urgency-text { font-size: 13px; color: var(--text); line-height: 1.4; }
   .urgency-text strong { color: var(--red); }
+
+  /* MODAL / POPUP STYLES */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+    padding: 20px; backdrop-filter: blur(4px);
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-content {
+    background: white; border-radius: 16px; width: 100%; max-width: 400px;
+    padding: 32px 24px; position: relative; animation: fadeUp 0.3s ease;
+  }
+  .modal-close {
+    position: absolute; top: 16px; right: 16px; background: none; border: none;
+    font-size: 28px; cursor: pointer; color: var(--gray); line-height: 1;
+  }
+  .modal-title {
+    font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
+    margin-bottom: 8px; color: var(--text); text-align: center;
+  }
+  .ticket-option {
+    border: 2px solid #E5E7EB; border-radius: 12px; padding: 16px; margin-top: 16px;
+    cursor: pointer; text-align: left; transition: all 0.2s; position: relative;
+    overflow: hidden; background: white;
+  }
+  .ticket-option:hover { border-color: var(--red); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  .ticket-option.vip { border-color: var(--red); background: var(--off-white); }
+  .ticket-price { font-size: 22px; font-weight: 900; color: var(--red); margin-bottom: 4px; }
+  .ticket-name { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+  .ticket-features { font-size: 13px; color: var(--gray); line-height: 1.5; list-style: none; padding-left: 0; }
+  .ticket-features li { margin-bottom: 6px; display: flex; align-items: flex-start; gap: 6px; }
+  .ticket-features li::before { content: '✓'; color: var(--red); font-weight: bold; }
+  .popular-badge {
+    position: absolute; top: 0; right: 0; background: var(--red); color: white;
+    font-size: 10px; font-weight: 700; padding: 6px 12px; border-bottom-left-radius: 12px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
 </style>
 </head>
 <body>
 
+<!-- TICKER -->
 <div class="ticker">
   <span class="ticker-inner">
     🔴 ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp; ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp;
   </span>
 </div>
 
+<!-- HERO TOP -->
 <div class="hero-top">
   <div class="brand">LIVOLOGY</div>
   <div class="event-badge">Only ₹499</div>
 </div>
 
+<!-- HERO BODY -->
 <div class="hero-body">
   <div class="hero-label">
     <div class="pulse-dot"></div>
@@ -813,6 +221,7 @@
     38% of Indians have Fatty Liver — and most have no symptoms. Join Nagpur's first Liver Awareness Program. Get tested. Get educated. Get answers. All for just <strong style="color:var(--red);">₹499</strong>.
   </p>
 
+  <!-- STATS -->
   <div class="stats-row">
     <div class="stat-item">
       <div class="stat-num">38%</div>
@@ -828,6 +237,7 @@
     </div>
   </div>
 
+  <!-- CTA -->
   <div class="cta-hero">
     <a href="#register" class="btn-primary">🩸 Book My Seat — Only ₹499</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn-secondary">💬 WhatsApp to Book</a>
@@ -837,6 +247,7 @@
 
 <div class="divider"></div>
 
+<!-- DATE STRIP -->
 <div class="date-strip">
   <div class="date-info">
     <div class="date-box">
@@ -851,13 +262,12 @@
   <div class="free-badge">₹499 Only</div>
 </div>
 
+<!-- SYMPTOMS SECTION -->
 <div class="section">
   <div class="section-label">Warning Signs</div>
-
   <h2 style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; margin-bottom:16px; line-height:1.3;">
     Do You Feel <span style="color:var(--red);">Any of These?</span>
   </h2>
-
   <div class="symptoms-row">
     <div class="symptom-chip"><span class="symptom-icon">😴</span>Always tired</div>
     <div class="symptom-chip"><span class="symptom-icon">🤢</span>Bloating after meals</div>
@@ -866,16 +276,15 @@
     <div class="symptom-chip"><span class="symptom-icon">🍽️</span>Loss of appetite</div>
     <div class="symptom-chip"><span class="symptom-icon">⚡</span>Low energy all day</div>
   </div>
-
   <div class="urgency-bar">
     <div class="urgency-icon">⚠️</div>
     <div class="urgency-text">These are early signs of <strong>Fatty Liver</strong>. Ignored for years, fatty liver leads to cirrhosis, liver failure, and cancer. <strong>Get tested — for free — on June 13.</strong></div>
   </div>
 </div>
 
+<!-- WHAT YOU GET -->
 <div class="section" style="padding-top:0;">
   <div class="section-label">What's Included</div>
-
   <div class="event-cards">
     <div class="event-card">
       <span class="event-card-icon">🩸</span>
@@ -898,7 +307,6 @@
       <div class="event-card-sub">Which herbs actually work for liver health</div>
     </div>
   </div>
-
   <div class="event-card-full">
     <div class="event-card-full-icon">💎</div>
     <div>
@@ -908,44 +316,12 @@
   </div>
 </div>
 
-<div class="learn-section">
-  <div class="learn-label">Session Highlights</div>
-  <h2 class="learn-title">What You Will Learn in 1 Hour</h2>
-  <ul class="learn-list">
-    <li class="learn-item">
-      <div class="learn-check">✓</div>
-      Why 38% of Nagpur's population has fatty liver — and doesn't know it
-    </li>
-    <li class="learn-item">
-      <div class="learn-check">✓</div>
-      How to read your LFT report — what SGPT, SGOT, Bilirubin numbers mean
-    </li>
-    <li class="learn-item">
-      <div class="learn-check">✓</div>
-      The 3-stage fatty liver progression — and how to reverse Stage 1 & 2 naturally
-    </li>
-    <li class="learn-item">
-      <div class="learn-check">✓</div>
-      Top 5 foods destroying your liver daily — that you think are healthy
-    </li>
-    <li class="learn-item">
-      <div class="learn-check">✓</div>
-      The WHW Method for liver healing — What to eat, How much, When
-    </li>
-    <li class="learn-item">
-      <div class="learn-check">✓</div>
-      Ayurvedic herbs clinically proven to reduce liver inflammation
-    </li>
-  </ul>
-  <a href="#register" class="btn-primary">Book My Seat — ₹499 →</a>
-</div>
-
+<!-- SPEAKERS -->
 <div class="speakers-section">
   <div class="section-label">Your Experts</div>
   <h2 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; margin-bottom:20px; line-height:1.3;">
-    Learn From <span style="color:var(--red);">Nagpur's Best</span>
+    Learn From The <span style="color:var(--red);">Best</span>
   </h2>
-
   <div class="speakers-grid">
     <div class="speaker-card">
       <div class="speaker-avatar">NM</div>
@@ -955,28 +331,38 @@
         <div class="speaker-bio">Leading liver health physician with extensive experience in diagnosing and treating fatty liver and hepatic disorders in Nagpur.</div>
       </div>
     </div>
-
     <div class="speaker-card">
       <div class="speaker-avatar">BG</div>
       <div>
+         <div class="speaker-title">Clinical Nutritionist</div>
         <div class="speaker-name">Bhupendra Goud</div>
         <div class="speaker-title">Clinical Nutritionist</div>
-        <div class="speaker-bio">10+ years, 9,000+ client transformations. Creator of the WHW Method. Recognised by Chief Ministers of Maharashtra & Gujarat.</div>
+        <div class="speaker-bio">10+ years, 9,000+ client transformations. Creator of the WHW Method.</div>
+        <div class="speaker-bio">Recognised by Chief Ministers of Maharashtra & Gujarat and Awarded by the Health Minister of India , International Nutritionist in place of clinical Nutri,
+</div>
+
       </div>
     </div>
   </div>
 </div>
 
+<!-- REGISTER FORM -->
 <div class="form-section" id="register">
-  <h2 class="form-title">Book Your Seat — ₹499</h2>
+  <h2 class="form-title">Book Your Seat</h2>
   <p class="form-sub">Blood Test Included • 1 Hour Program • June 13, 2026 • Nagpur</p>
 
   <div class="form-group">
     <input type="text" id="fullName" class="form-input" placeholder="Your Full Name *" />
   </div>
+  
+  <!-- UPDATED WHATSAPP FIELD WITH VALIDATION -->
   <div class="form-group">
-    <input type="tel" id="whatsapp" class="form-input" placeholder="WhatsApp Number *" />
+    <input type="tel" id="whatsapp" class="form-input" placeholder="WhatsApp Number (10 Digits) *" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+    <div id="phoneError" style="color: var(--red); font-size: 11px; margin-top: 4px; display: none;">
+      Please enter a valid 10-digit Indian WhatsApp number.
+    </div>
   </div>
+
   <div class="form-group">
     <input type="number" id="age" class="form-input" placeholder="Your Age *" />
   </div>
@@ -984,60 +370,84 @@
     <input type="text" id="area" class="form-input" placeholder="Area in Nagpur *" />
   </div>
   <div class="form-group">
-    <select id="symptoms" class="form-input" style="color:#9CA3AF;">
+    <select id="symptoms" class="form-input" style="color:#9CA3AF;" onchange="this.style.color='#1A1A1A';">
       <option value="" disabled selected>Do you have fatty liver symptoms?</option>
-      <option value="Yes — I have some symptoms" style="color:#1A1A1A;">Yes — I have some symptoms</option>
-      <option value="Not sure — want to get tested" style="color:#1A1A1A;">Not sure — want to get tested</option>
-      <option value="No symptoms — preventive visit" style="color:#1A1A1A;">No symptoms — preventive visit</option>
+      <option value="Yes — I have some symptoms">Yes — I have some symptoms</option>
+      <option value="Not sure — want to get tested">Not sure — want to get tested</option>
+      <option value="No symptoms — preventive visit">No symptoms — preventive visit</option>
     </select>
   </div>
 
   <button class="form-submit" onclick="handleRegister()">
-    ✅ Pay ₹499 & Confirm My Seat
+    ✅ Proceed to Book
   </button>
 
   <p style="font-size:11px; color:var(--gray); text-align:center; margin-top:12px; line-height:1.5;">
-    ₹499 includes Blood Test + 1 Hour Expert Program. Confirmation sent on WhatsApp.
+    Confirmation sent on WhatsApp.
   </p>
 </div>
 
-<div class="alert-section">
-  <div class="alert-icon">🚨</div>
-  <h2 class="alert-title">Don't Wait For Symptoms.<br>Your Liver Won't Warn You.</h2>
-  <p class="alert-body">
-    Fatty liver has NO symptoms until it's Stage 3 or 4. By then, damage is severe. The only way to know is a blood test. Get yours — free — on June 13.
-  </p>
-  <a href="#register" class="btn-white">Book My Seat for ₹499 →</a>
-  <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp Us to Register
-  </a>
-</div>
-
+<!-- FOOTER -->
 <footer>
   <div class="footer-brand">LIVOLOGY by ArogyaVeda</div>
   <div class="footer-text">Aarogyaveda Nutriscience & Wellness Foods Pvt. Ltd. • Amravati, Maharashtra</div>
   <div style="margin-top:8px; font-size:11px; color:#D1D5DB;">
-    Free event. Limited to 100 participants. Nagpur, June 13, 2026.
+    Limited to 100 participants. Nagpur, June 13, 2026.
   </div>
 </footer>
 
 <div class="spacer"></div>
 
+<!-- STICKY CTA -->
 <div class="sticky-cta">
   <div class="sticky-text">
     <strong>June 13 — Blood Test Included 🩸</strong>
     Only a few seats left
   </div>
-  <a href="#register" class="sticky-btn">Book ₹499</a>
+  <a href="#register" class="sticky-btn">Book Now</a>
+</div>
+
+<!-- TICKET SELECTION MODAL -->
+<div class="modal-overlay" id="ticketModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-title">Choose Your Pass</div>
+    <p style="font-size:13px; color:var(--gray); text-align:center; margin-bottom:20px;">Select a pass to complete your booking.</p>
+
+    <!-- General Ticket -->
+    <div class="ticket-option" onclick="submitWithTicket('General - ₹499')">
+      <div class="ticket-price">₹499</div>
+      <div class="ticket-name">General Pass</div>
+      <ul class="ticket-features">
+        <li>Blood Test (LFT Panel)</li>
+        <li>1 Hour Expert Education Session</li>
+        <li>General Seating Area</li>
+      </ul>
+    </div>
+
+    <!-- VIP Ticket -->
+    <div class="ticket-option vip" onclick="submitWithTicket('VIP - ₹999')">
+      <div class="popular-badge">Recommended</div>
+      <div class="ticket-price">₹999</div>
+      <div class="ticket-name">VIP Priority Pass</div>
+      <ul class="ticket-features">
+        <li><strong>Everything in General Pass</strong></li>
+        <li>Front Row VIP Seating</li>
+        <li>Priority Blood Collection (No Queue)</li>
+        <li>1-on-1 Diet Consultation Post-Event</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <script>
+  // UPDATED VALIDATION LOGIC
   function handleRegister() {
     const inputs = document.querySelectorAll('.form-input');
     let allFilled = true;
+    let phoneValid = true;
     
-    // UI Validation (Aapka original logic)
+    // 1. Basic empty field validation
     inputs.forEach(input => {
       if (!input.value) {
         allFilled = false;
@@ -1046,35 +456,61 @@
       }
     });
 
-    if (allFilled) {
-      const btn = document.querySelector('.form-submit');
-      btn.textContent = '⏳ Saving Details...';
-      btn.disabled = true;
+    // 2. Strict WhatsApp validation (10 digits starting with 6-9)
+    const whatsappInput = document.getElementById('whatsapp');
+    const phoneError = document.getElementById('phoneError');
+    const phoneRegex = /^[6-9]\d{9}$/; 
 
-      // TODO: APNA GOOGLE APPS SCRIPT WEB APP URL YAHAN PASTE KAREIN
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyKzYdfzmr5VJmcmHE1RugAQJZytF-ekIVXXehyGJB2yaDQG-J1Yar-aOyCTbkN8_bi/exec'; 
-
-      // Data collect kar rahe hain
-      const formData = new FormData();
-      formData.append('Name', document.getElementById('fullName').value);
-      formData.append('WhatsApp', document.getElementById('whatsapp').value);
-      formData.append('Age', document.getElementById('age').value);
-      formData.append('Area', document.getElementById('area').value);
-      formData.append('Symptoms', document.getElementById('symptoms').value);
-
-      // Google Sheet API par data bhej rahe hain
-      fetch(scriptURL, { method: 'POST', body: formData })
-        .then(response => {
-          btn.textContent = '🎉 your Form Is Submitted Our Team will Share you a Payment and Venue Details.';
-          btn.style.background = '#16A34A';
-        })
-        .catch(error => {
-          console.error('Error!', error.message);
-          btn.textContent = '❌ Error! Try Again.';
-          btn.disabled = false;
-          btn.style.background = '#C41E2A';
-        });
+    if (whatsappInput.value && !phoneRegex.test(whatsappInput.value)) {
+      phoneValid = false;
+      whatsappInput.style.borderColor = '#C41E2A';
+      phoneError.style.display = 'block';
+      
+      setTimeout(() => {
+        whatsappInput.style.borderColor = '#E5E7EB';
+        phoneError.style.display = 'none';
+      }, 3000);
     }
+
+    // 3. Open modal ONLY if everything is filled and phone is valid
+    if (allFilled && phoneValid) {
+      document.getElementById('ticketModal').classList.add('active');
+    }
+  }
+
+  function closeModal() {
+    document.getElementById('ticketModal').classList.remove('active');
+  }
+
+  function submitWithTicket(selectedTicket) {
+    closeModal(); 
+    
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = '⏳ Saving Details...';
+    btn.disabled = true;
+
+    // 🚨 TODO: APNA GOOGLE APPS SCRIPT WEB APP URL YAHAN PASTE KAREIN
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyKzYdfzmr5VJmcmHE1RugAQJZytF-ekIVXXehyGJB2yaDQG-J1Yar-aOyCTbkN8_bi/exec'; 
+
+    const formData = new FormData();
+    formData.append('Name', document.getElementById('fullName').value);
+    formData.append('WhatsApp', document.getElementById('whatsapp').value);
+    formData.append('Age', document.getElementById('age').value);
+    formData.append('Area', document.getElementById('area').value);
+    formData.append('Symptoms', document.getElementById('symptoms').value);
+    formData.append('TicketType', selectedTicket);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        btn.textContent = '🎉 Booked! Check WhatsApp for payment link.';
+        btn.style.background = '#16A34A';
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        btn.textContent = '❌ Error! Try Again.';
+        btn.disabled = false;
+        btn.style.background = '#C41E2A';
+      });
   }
 
   // Smooth scroll
