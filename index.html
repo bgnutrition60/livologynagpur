@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Liver Awareness Program — Nagpur | June 13, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -22,6 +23,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <style>
   :root {
     --red: #C41E2A;
@@ -149,9 +151,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .form-submit { width: 100%; background: var(--red); color: white; border: none; padding: 18px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 4px; }
   .form-submit:hover { background: var(--red-dark); transform: translateY(-1px); }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
   /* STICKY CTA */
   .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 2px solid var(--red); padding: 12px 24px; display: flex; gap: 10px; z-index: 999; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
   .sticky-text { font-size: 11px; color: var(--gray); line-height: 1.3; flex: 1; display: flex; flex-direction: column; justify-content: center; }
@@ -169,41 +168,31 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .urgency-text strong { color: var(--red); }
 
   /* MODAL / POPUP STYLES */
-  .modal-overlay {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.7);
-    z-index: 10000; display: none; align-items: center; justify-content: center;
-    padding: 20px; backdrop-filter: blur(4px);
-  }
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
   .modal-overlay.active { display: flex; }
-  .modal-content {
-    background: white; border-radius: 16px; width: 100%; max-width: 400px;
-    padding: 32px 24px; position: relative; animation: fadeUp 0.3s ease;
-  }
-  .modal-close {
-    position: absolute; top: 16px; right: 16px; background: none; border: none;
-    font-size: 28px; cursor: pointer; color: var(--gray); line-height: 1;
-  }
-  .modal-title {
-    font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
-    margin-bottom: 8px; color: var(--text); text-align: center;
-  }
-  .ticket-option {
-    border: 2px solid #E5E7EB; border-radius: 12px; padding: 16px; margin-top: 16px;
-    cursor: pointer; text-align: left; transition: all 0.2s; position: relative;
-    overflow: hidden; background: white;
-  }
-  .ticket-option:hover { border-color: var(--red); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-  .ticket-option.vip { border-color: var(--red); background: var(--off-white); }
+  .modal-content { background: white; border-radius: 16px; width: 100%; max-width: 400px; padding: 32px 24px; position: relative; animation: fadeUp 0.3s ease; }
+  .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--gray); line-height: 1; }
+  .modal-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text); text-align: center; }
+  
+  .ticket-option { border: 2px solid #E5E7EB; border-radius: 12px; padding: 16px; margin-top: 16px; cursor: pointer; text-align: left; transition: all 0.2s; position: relative; overflow: hidden; background: white; }
+  .ticket-option:hover { border-color: var(--red); }
+  .ticket-option.vip { background: var(--off-white); }
+  
+  /* SELECTED STATE CSS */
+  .ticket-option.selected { border-color: var(--red); background: #FFF0F0; border-width: 2px; box-shadow: 0 4px 12px rgba(196,30,42,0.15); }
+  .ticket-option.selected::after { content: '✓'; position: absolute; top: 16px; right: 16px; width: 24px; height: 24px; background: var(--red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; }
+  
   .ticket-price { font-size: 22px; font-weight: 900; color: var(--red); margin-bottom: 4px; }
   .ticket-name { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
   .ticket-features { font-size: 13px; color: var(--gray); line-height: 1.5; list-style: none; padding-left: 0; }
   .ticket-features li { margin-bottom: 6px; display: flex; align-items: flex-start; gap: 6px; }
   .ticket-features li::before { content: '✓'; color: var(--red); font-weight: bold; }
-  .popular-badge {
-    position: absolute; top: 0; right: 0; background: var(--red); color: white;
-    font-size: 10px; font-weight: 700; padding: 6px 12px; border-bottom-left-radius: 12px;
-    text-transform: uppercase; letter-spacing: 0.05em;
-  }
+  .popular-badge { position: absolute; top: 0; right: 0; background: var(--red); color: white; font-size: 10px; font-weight: 700; padding: 6px 12px; border-bottom-left-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* MODAL FINAL SUBMIT BUTTON */
+  .modal-submit-btn { width: 100%; background: var(--red); color: white; border: none; padding: 18px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 20px; }
+  .modal-submit-btn:disabled { background: #D1D5DB; cursor: not-allowed; color: #6B7280; }
+  .modal-submit-btn:not(:disabled):hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,30,42,0.3); }
 </style>
 </head>
 <body>
@@ -257,7 +246,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <!-- CTA -->
   <div class="cta-hero">
     <a href="#register" class="btn-primary">🩸 Book My Seat — Only ₹499</a>
-    <a href="https://api.whatsapp.com/send/?phone=8700583005&text&type=phone_number&app_absent=0" class="btn-secondary">💬 WhatsApp to Book</a>
+    <a href="https://wa.me/91XXXXXXXXXX" class="btn-secondary">💬 WhatsApp to Book</a>
     <div class="seats-note">⚡ Only 100 seats available — filling fast</div>
   </div>
 </div>
@@ -337,7 +326,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 <div class="speakers-section">
   <div class="section-label">Your Experts</div>
   <h2 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; margin-bottom:20px; line-height:1.3;">
-    Learn From The <span style="color:var(--red);">Best</span>
+    Learn From <span style="color:var(--red);">Nagpur's Best</span>
   </h2>
   <div class="speakers-grid">
     <div class="speaker-card">
@@ -351,13 +340,9 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     <div class="speaker-card">
       <div class="speaker-avatar">BG</div>
       <div>
-         <div class="speaker-title">Clinical Nutritionist</div>
         <div class="speaker-name">Bhupendra Goud</div>
         <div class="speaker-title">Clinical Nutritionist</div>
-        <div class="speaker-bio">10+ years, 9,000+ client transformations. Creator of the WHW Method.</div>
-        <div class="speaker-bio">Recognised by Chief Ministers of Maharashtra & Gujarat and Awarded by the Health Minister of India , International Nutritionist in place of clinical Nutri,
-</div>
-
+        <div class="speaker-bio">10+ years, 9,000+ client transformations. Creator of the WHW Method. Recognised by Chief Ministers of Maharashtra & Gujarat.</div>
       </div>
     </div>
   </div>
@@ -371,15 +356,12 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <div class="form-group">
     <input type="text" id="fullName" class="form-input" placeholder="Your Full Name *" />
   </div>
-  
-  <!-- UPDATED WHATSAPP FIELD WITH VALIDATION -->
   <div class="form-group">
     <input type="tel" id="whatsapp" class="form-input" placeholder="WhatsApp Number (10 Digits) *" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
     <div id="phoneError" style="color: var(--red); font-size: 11px; margin-top: 4px; display: none;">
       Please enter a valid 10-digit Indian WhatsApp number.
     </div>
   </div>
-
   <div class="form-group">
     <input type="number" id="age" class="form-input" placeholder="Your Age *" />
   </div>
@@ -429,10 +411,10 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()">×</button>
     <div class="modal-title">Choose Your Pass</div>
-    <p style="font-size:13px; color:var(--gray); text-align:center; margin-bottom:20px;">Select a pass to complete your booking.</p>
+    <p style="font-size:13px; color:var(--gray); text-align:center; margin-bottom:12px;">Select a pass to complete your booking.</p>
 
     <!-- General Ticket -->
-    <div class="ticket-option" onclick="submitWithTicket('General - ₹499')">
+    <div class="ticket-option" id="cardGeneral" onclick="selectTicket('General - ₹499', 'cardGeneral')">
       <div class="ticket-price">₹499</div>
       <div class="ticket-name">General Pass</div>
       <ul class="ticket-features">
@@ -443,7 +425,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     </div>
 
     <!-- VIP Ticket -->
-    <div class="ticket-option vip" onclick="submitWithTicket('VIP - ₹999')">
+    <div class="ticket-option vip" id="cardVIP" onclick="selectTicket('VIP - ₹999', 'cardVIP')">
       <div class="popular-badge">Recommended</div>
       <div class="ticket-price">₹999</div>
       <div class="ticket-name">VIP Priority Pass</div>
@@ -454,17 +436,24 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
         <li>1-on-1 Diet Consultation Post-Event</li>
       </ul>
     </div>
+
+    <!-- NEW FINAL SUBMIT BUTTON -->
+    <button class="modal-submit-btn" id="modalSubmitBtn" onclick="submitFinalForm()" disabled>
+      Select a Pass to Continue
+    </button>
+
   </div>
 </div>
 
 <script>
-  // UPDATED VALIDATION LOGIC
+  let chosenTicketType = "";
+
+  // 1. Initial form validation aur Modal open karna
   function handleRegister() {
     const inputs = document.querySelectorAll('.form-input');
     let allFilled = true;
     let phoneValid = true;
     
-    // 1. Basic empty field validation
     inputs.forEach(input => {
       if (!input.value) {
         allFilled = false;
@@ -473,7 +462,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
       }
     });
 
-    // 2. Strict WhatsApp validation (10 digits starting with 6-9)
     const whatsappInput = document.getElementById('whatsapp');
     const phoneError = document.getElementById('phoneError');
     const phoneRegex = /^[6-9]\d{9}$/; 
@@ -482,14 +470,12 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
       phoneValid = false;
       whatsappInput.style.borderColor = '#C41E2A';
       phoneError.style.display = 'block';
-      
       setTimeout(() => {
         whatsappInput.style.borderColor = '#E5E7EB';
         phoneError.style.display = 'none';
       }, 3000);
     }
 
-    // 3. Open modal ONLY if everything is filled and phone is valid
     if (allFilled && phoneValid) {
       document.getElementById('ticketModal').classList.add('active');
     }
@@ -499,12 +485,37 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     document.getElementById('ticketModal').classList.remove('active');
   }
 
-  function submitWithTicket(selectedTicket) {
-    closeModal(); 
+  // 2. Ticket select karne par highlight karna aur button active karna
+  function selectTicket(ticketName, elementId) {
+    chosenTicketType = ticketName;
     
-    const btn = document.querySelector('.form-submit');
-    btn.textContent = '⏳ Saving Details...';
-    btn.disabled = true;
+    // Sabse pehle dono card se 'selected' class hatao
+    document.getElementById('cardGeneral').classList.remove('selected');
+    document.getElementById('cardVIP').classList.remove('selected');
+    
+    // Jisme click kiya usme 'selected' class lagao
+    document.getElementById(elementId).classList.add('selected');
+
+    // Button ko active karo aur text change karo
+    const btn = document.getElementById('modalSubmitBtn');
+    btn.disabled = false;
+    
+    if(ticketName.includes('VIP')) {
+      btn.textContent = 'Pay ₹999 & Confirm VIP Seat';
+    } else {
+      btn.textContent = 'Pay ₹499 & Confirm General Seat';
+    }
+  }
+
+  // 3. Final Submit Button Click
+  function submitFinalForm() {
+    if(!chosenTicketType) return; // Agar ticket select nahi kiya toh aage mat badho
+
+    const modalBtn = document.getElementById('modalSubmitBtn');
+    const mainPageBtn = document.querySelector('.form-submit');
+    
+    modalBtn.textContent = '⏳ Processing...';
+    modalBtn.disabled = true;
 
     // 🚨 TODO: APNA GOOGLE APPS SCRIPT WEB APP URL YAHAN PASTE KAREIN
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyKzYdfzmr5VJmcmHE1RugAQJZytF-ekIVXXehyGJB2yaDQG-J1Yar-aOyCTbkN8_bi/exec'; 
@@ -515,18 +526,31 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     formData.append('Age', document.getElementById('age').value);
     formData.append('Area', document.getElementById('area').value);
     formData.append('Symptoms', document.getElementById('symptoms').value);
-    formData.append('TicketType', selectedTicket);
+    formData.append('TicketType', chosenTicketType);
 
     fetch(scriptURL, { method: 'POST', body: formData })
       .then(response => {
-        btn.textContent = '🎉 Our Team Will Contact you shortly for venu and payment details .';
-        btn.style.background = '#16A34A';
+        // ==========================================
+        // 🎯 META PIXEL LEAD TRACKING FIRES HERE
+        // ==========================================
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {
+            content_name: chosenTicketType,
+            currency: 'INR',
+            value: chosenTicketType.includes('999') ? 999.00 : 499.00
+          });
+        }
+        
+        closeModal(); // Popup band karo
+        
+        mainPageBtn.textContent = '🎉 Our team will contact you on WhatsApp soon!';
+        mainPageBtn.style.background = '#16A34A';
+        mainPageBtn.disabled = true;
       })
       .catch(error => {
         console.error('Error!', error.message);
-        btn.textContent = '❌ Error! Try Again.';
-        btn.disabled = false;
-        btn.style.background = '#C41E2A';
+        modalBtn.textContent = '❌ Error! Try Again.';
+        modalBtn.disabled = false;
       });
   }
 
