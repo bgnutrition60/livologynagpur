@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Liver Awareness Program — Nagpur | June 13, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -22,8 +21,6 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
-
 <style>
   :root {
     --red: #C41E2A;
@@ -34,6 +31,8 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     --gray: #6B7280;
     --light-gray: #F5F5F5;
     --text: #1A1A1A;
+    --gold: #D4AF37; /* Add Gold for Borders */
+    --black: #000000;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,6 +42,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     background: var(--white);
     color: var(--text);
     overflow-x: hidden;
+    line-height: 1.5;
   }
 
   /* TICKER */
@@ -51,7 +51,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   @keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
 
   /* HERO */
-  .hero { background: var(--white); padding: 0; position: relative; overflow: hidden; }
   .hero-top { background: var(--red); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
   .brand { font-family: 'Playfair Display', serif; font-size: 22px; color: white; font-weight: 700; letter-spacing: 0.02em; }
   .event-badge { background: white; color: var(--red); padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
@@ -61,7 +60,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
   .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(32px, 7vw, 52px); font-weight: 900; line-height: 1.1; color: var(--text); margin-bottom: 8px; animation: fadeUp 0.7s ease 0.1s both; }
   .hero-headline span { color: var(--red); display: block; }
-  .hero-sub { font-size: 16px; color: var(--gray); line-height: 1.6; margin-bottom: 32px; max-width: 520px; animation: fadeUp 0.7s ease 0.2s both; }
+  .hero-sub { font-size: 16px; color: var(--gray); margin-bottom: 32px; max-width: 520px; animation: fadeUp 0.7s ease 0.2s both; }
 
   /* STATS ROW */
   .stats-row { display: flex; gap: 0; border: 2px solid var(--red); border-radius: 12px; overflow: hidden; margin-bottom: 32px; animation: fadeUp 0.7s ease 0.3s both; }
@@ -105,21 +104,139 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .learn-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.85); }
   .learn-check { width: 20px; height: 20px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 11px; }
 
-  /* SPEAKERS */
-  .speakers-section { padding: 40px 24px; background: var(--white); }
-  .speakers-grid { display: flex; flex-direction: column; gap: 16px; }
-  .speaker-card { display: flex; gap: 16px; align-items: center; background: var(--off-white); border: 1px solid #FFD0D0; border-radius: 12px; padding: 20px; position: relative; overflow: hidden; }
-  .speaker-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--red); }
-  .speaker-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: white; flex-shrink: 0; border: 3px solid white; box-shadow: 0 4px 12px rgba(196,30,42,0.2); }
-  .speaker-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-  .speaker-title { font-size: 12px; color: var(--red); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-  .speaker-bio { font-size: 12px; color: var(--gray); line-height: 1.5; }
+  /* =======================================
+     🎯 REFINED OVERLAPPING SPEAKERS DESIGN 
+     ======================================= */
+  .speakers-section { padding: 40px 24px; background: var(--light-gray); }
+  .speakers-grid { display: flex; flex-direction: column; gap: 32px; }
+  
+  .section-label.speakers-label {
+    background: var(--gold);
+    color: var(--black);
+    display: inline-flex;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .section-label.speakers-label::after { background: var(--white); height: 2px;}
+
+  .speaker-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Improved Circle Visibility and Style */
+  .speaker-circle { 
+    width: 140px; /* Increased size */
+    height: 140px; 
+    border-radius: 50%; 
+    background: var(--white); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-shrink: 0; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Deeper shadow */
+    overflow: hidden;
+    position: relative;
+    z-index: 2; /* Box ke upar dikhega */
+    border: 4px solid var(--gold); /* NEW Defined Gold Border */
+  }
+  .speaker-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Thicker and Premium Speaker Card */
+  .speaker-box { 
+    background: var(--white); 
+    border-radius: 12px; 
+    padding: 24px; 
+    width: 100%;
+    z-index: 1;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05); /* Premium Card Shadow */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative Thicker Colored Border (Red Accent) */
+  .speaker-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--red);
+  }
+
+  /* 🔴 Dr. Nilesh Card (Left Layout) */
+  .layout-left .speaker-box {
+    margin-left: -60px; /* More Overlap */
+    padding-left: 80px; /* Details start further to the right */
+    text-align: left;
+    border-top-left-radius: 6px; /* Define shape nicely */
+    border-bottom-left-radius: 6px;
+  }
+  .layout-left .speaker-box::before { left: 0; }
+
+  /* 🟢 Bhupendra Sir Card (Right Layout) */
+  .layout-right .speaker-box {
+    margin-right: -60px; /* More Overlap */
+    padding-right: 80px; /* Details finish earlier before right circle */
+    text-align: right;
+    border-top-right-radius: 6px; /* Define shape nicely */
+    border-bottom-right-radius: 6px;
+  }
+  .layout-right .speaker-box::before { right: 0; }
+
+  /* Enhanced Text Visibility */
+  .speaker-name { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 20px; /* Larger Name */
+    font-weight: 900; /* Extra Bold */
+    color: var(--black); /* Max Contrast */
+    margin-bottom: 4px; 
+  }
+  
+  .speaker-title { 
+    font-size: 13px; /* Larger Title */
+    color: var(--red); 
+    font-weight: 700; /* Thicker Title */
+    text-transform: uppercase; 
+    letter-spacing: 0.05em; 
+    margin-bottom: 8px; 
+  }
+  
+  .speaker-bio { 
+    font-size: 13px; /* Slightly larger text for visibility */
+    color: var(--text); /* Max contrast for bio */
+    line-height: 1.6; /* Better leading for reading */
+    font-weight: 400; /* Regular DM Sans */
+  }
+
+  /* Responsive fixes for small mobile screens */
+  @media (max-width: 480px) {
+    .speaker-circle { width: 110px; height: 110px; }
+    .layout-left .speaker-box { margin-left: -55px; padding-left: 65px; }
+    .layout-right .speaker-box { margin-right: -55px; padding-right: 65px; }
+    .speaker-name { font-size: 18px; }
+    .speaker-bio { font-size: 12px; }
+  }
+  /* ======================================= */
 
   /* ALERT SECTION */
   .alert-section { background: var(--red); padding: 40px 24px; text-align: center; color: white; }
   .alert-icon { font-size: 48px; margin-bottom: 16px; }
   .alert-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; margin-bottom: 12px; line-height: 1.2; }
-  .alert-body { font-size: 15px; opacity: 0.9; line-height: 1.6; margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .alert-body { font-size: 15px; opacity: 0.9; margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
   .btn-white { background: white; color: var(--red); border: none; padding: 18px 24px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all 0.2s; margin-bottom: 12px; }
   .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
 
@@ -193,24 +310,27 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .modal-submit-btn { width: 100%; background: var(--red); color: white; border: none; padding: 18px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 20px; }
   .modal-submit-btn:disabled { background: #D1D5DB; cursor: not-allowed; color: #6B7280; }
   .modal-submit-btn:not(:disabled):hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,30,42,0.3); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 </style>
 </head>
 <body>
 
-<!-- TICKER -->
 <div class="ticker">
   <span class="ticker-inner">
     🔴 ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp; ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp;
   </span>
 </div>
 
-<!-- HERO TOP -->
 <div class="hero-top">
   <div class="brand">LIVOLOGY</div>
   <div class="event-badge">Only ₹499</div>
 </div>
 
-<!-- HERO BODY -->
 <div class="hero-body">
   <div class="hero-label">
     <div class="pulse-dot"></div>
@@ -227,7 +347,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     38% of Indians have Fatty Liver — and most have no symptoms. Join Nagpur's first Liver Awareness Program. Get tested. Get educated. Get answers. All for just <strong style="color:var(--red);">₹499</strong>.
   </p>
 
-  <!-- STATS -->
   <div class="stats-row">
     <div class="stat-item">
       <div class="stat-num">38%</div>
@@ -243,7 +362,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     </div>
   </div>
 
-  <!-- CTA -->
   <div class="cta-hero">
     <a href="#register" class="btn-primary">🩸 Book My Seat — Only ₹499</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn-secondary">💬 WhatsApp to Book</a>
@@ -253,7 +371,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 
 <div class="divider"></div>
 
-<!-- DATE STRIP -->
 <div class="date-strip">
   <div class="date-info">
     <div class="date-box">
@@ -268,7 +385,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <div class="free-badge">₹499 Only</div>
 </div>
 
-<!-- SYMPTOMS SECTION -->
 <div class="section">
   <div class="section-label">Warning Signs</div>
   <h2 style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; margin-bottom:16px; line-height:1.3;">
@@ -288,7 +404,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   </div>
 </div>
 
-<!-- WHAT YOU GET -->
 <div class="section" style="padding-top:0;">
   <div class="section-label">What's Included</div>
   <div class="event-cards">
@@ -322,36 +437,40 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   </div>
 </div>
 
-<!-- SPEAKERS -->
 <div class="speakers-section">
-  <div class="section-label">Your Experts</div>
-  <h2 style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; margin-bottom:20px; line-height:1.3;">
-    Learn From <span style="color:var(--red);"> Best</span>
+  <div class="section-label speakers-label">Your Experts</div>
+  <h2 style="font-family:'Playfair Display',serif; font-size:26px; font-weight:700; margin-bottom:28px; line-height:1.3; text-align:center;">
+    Learn From <span style="color:var(--red);">Nagpur's Best</span>
   </h2>
+  
   <div class="speakers-grid">
-    <div class="speaker-card">
-      <div class="speaker-avatar">NM</div>
-      <div>
+    <div class="speaker-container layout-left">
+      <div class="speaker-circle">
+        <img src="https://cdn.shopify.com/s/files/1/0989/4215/7102/files/Dr_Nilesh_Morey.png?v=1778164958" alt="Dr. Nilesh Morey">
+      </div>
+      <div class="speaker-box">
         <div class="speaker-name">Dr. Nilesh Morey</div>
         <div class="speaker-title">Medical Expert</div>
-        <div class="speaker-bio">Leading liver Expert &  health physician and Pediatrician.</div>
-
+        <div class="speaker-bio">Leading liver Expert & health physician and Pediatrician.</div>
       </div>
     </div>
-    <div class="speaker-card">
-      <div class="speaker-avatar">BG</div>
-      <div>
+    
+    <div class="speaker-container layout-right">
+      <div class="speaker-box">
         <div class="speaker-name">Bhupendra Goud</div>
-        <div class="speaker-title">International Nutritionist in place of clinical Nutritionist</div>
-        <div class="speaker-bio">10+ years, 9,000+ client transformations. Creator of the WHW Method.</div>
-        <div class="speaker-bio">Recognised by Chief Ministers of Maharashtra & Gujarat and Awarded by the Health Minister of India. </div>
-
+        <div class="speaker-title">International Nutritionist</div>
+        <div class="speaker-bio">
+          10+ years, 9,000+ client transformations. Creator of the WHW Method.<br><br>
+          Recognised by Chief Ministers of Maharashtra & Gujarat and Awarded by the Health Minister of India.
+        </div>
+      </div>
+      <div class="speaker-circle">
+        <img src="https://cdn.shopify.com/s/files/1/0989/4215/7102/files/bg_profile_2.png?v=1778164220" alt="Bhupendra Goud">
       </div>
     </div>
   </div>
 </div>
 
-<!-- REGISTER FORM -->
 <div class="form-section" id="register">
   <h2 class="form-title">Book Your Seat</h2>
   <p class="form-sub">Blood Test Included • 1 Hour Program • June 13, 2026 • Nagpur</p>
@@ -388,7 +507,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   </p>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">LIVOLOGY by ArogyaVeda</div>
   <div class="footer-text">Aarogyaveda Nutriscience & Wellness Foods Pvt. Ltd. • Amravati, Maharashtra</div>
@@ -399,7 +517,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 
 <div class="spacer"></div>
 
-<!-- STICKY CTA -->
 <div class="sticky-cta">
   <div class="sticky-text">
     <strong>June 13 — Blood Test Included 🩸</strong>
@@ -408,14 +525,12 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <a href="#register" class="sticky-btn">Book Now</a>
 </div>
 
-<!-- TICKET SELECTION MODAL -->
 <div class="modal-overlay" id="ticketModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()">×</button>
     <div class="modal-title">Choose Your Pass</div>
     <p style="font-size:13px; color:var(--gray); text-align:center; margin-bottom:12px;">Select a pass to complete your booking.</p>
 
-    <!-- General Ticket -->
     <div class="ticket-option" id="cardGeneral" onclick="selectTicket('General - ₹499', 'cardGeneral')">
       <div class="ticket-price">₹499</div>
       <div class="ticket-name">General Pass</div>
@@ -426,7 +541,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
       </ul>
     </div>
 
-    <!-- VIP Ticket -->
     <div class="ticket-option vip" id="cardVIP" onclick="selectTicket('VIP - ₹999', 'cardVIP')">
       <div class="popular-badge">Recommended</div>
       <div class="ticket-price">₹999</div>
@@ -440,7 +554,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
       </ul>
     </div>
 
-    <!-- NEW FINAL SUBMIT BUTTON -->
     <button class="modal-submit-btn" id="modalSubmitBtn" onclick="submitFinalForm()" disabled>
       Select a Pass to Continue
     </button>
@@ -451,7 +564,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 <script>
   let chosenTicketType = "";
 
-  // 1. Initial form validation aur Modal open karna
   function handleRegister() {
     const inputs = document.querySelectorAll('.form-input');
     let allFilled = true;
@@ -488,18 +600,14 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     document.getElementById('ticketModal').classList.remove('active');
   }
 
-  // 2. Ticket select karne par highlight karna aur button active karna
   function selectTicket(ticketName, elementId) {
     chosenTicketType = ticketName;
     
-    // Sabse pehle dono card se 'selected' class hatao
     document.getElementById('cardGeneral').classList.remove('selected');
     document.getElementById('cardVIP').classList.remove('selected');
     
-    // Jisme click kiya usme 'selected' class lagao
     document.getElementById(elementId).classList.add('selected');
 
-    // Button ko active karo aur text change karo
     const btn = document.getElementById('modalSubmitBtn');
     btn.disabled = false;
     
@@ -510,9 +618,8 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     }
   }
 
-  // 3. Final Submit Button Click
   function submitFinalForm() {
-    if(!chosenTicketType) return; // Agar ticket select nahi kiya toh aage mat badho
+    if(!chosenTicketType) return; 
 
     const modalBtn = document.getElementById('modalSubmitBtn');
     const mainPageBtn = document.querySelector('.form-submit');
@@ -520,7 +627,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     modalBtn.textContent = '⏳ Processing...';
     modalBtn.disabled = true;
 
-    // 🚨 TODO: APNA GOOGLE APPS SCRIPT WEB APP URL YAHAN PASTE KAREIN
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyKzYdfzmr5VJmcmHE1RugAQJZytF-ekIVXXehyGJB2yaDQG-J1Yar-aOyCTbkN8_bi/exec'; 
 
     const formData = new FormData();
@@ -533,9 +639,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 
     fetch(scriptURL, { method: 'POST', body: formData })
       .then(response => {
-        // ==========================================
-        // 🎯 META PIXEL LEAD TRACKING FIRES HERE
-        // ==========================================
         if (typeof fbq === 'function') {
           fbq('track', 'Lead', {
             content_name: chosenTicketType,
@@ -544,7 +647,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
           });
         }
         
-        closeModal(); // Popup band karo
+        closeModal(); 
         
         mainPageBtn.textContent = '🎉 Our team will contact you on soon!';
         mainPageBtn.style.background = '#16A34A';
@@ -557,7 +660,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
       });
   }
 
-  // Smooth scroll
   document.querySelectorAll('a[href="#register"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
