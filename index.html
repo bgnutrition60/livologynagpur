@@ -3,24 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liver Awareness Program — Nagpur | June 13, 2026</title>
+<title>Liver Awareness Program — Nagpur | June 13, 2026 (9 AM to 10 AM)</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1944355549545451');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
-/></noscript>
+
 <style>
   :root {
     --red: #C41E2A;
@@ -31,7 +17,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     --gray: #6B7280;
     --light-gray: #F5F5F5;
     --text: #1A1A1A;
-    --gold: #D4AF37; /* Add Gold for Borders */
+    --gold: #D4AF37; 
     --black: #000000;
   }
 
@@ -96,17 +82,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .event-card-full-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
   .event-card-full-sub { font-size: 12px; opacity: 0.85; line-height: 1.4; }
 
-  /* WHAT YOU LEARN */
-  .learn-section { background: var(--text); padding: 40px 24px; color: white; }
-  .learn-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red-light); margin-bottom: 8px; }
-  .learn-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; color: white; }
-  .learn-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-  .learn-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.85); }
-  .learn-check { width: 20px; height: 20px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 11px; }
-
-  /* =======================================
-     🎯 REFINED OVERLAPPING SPEAKERS DESIGN 
-     ======================================= */
+  /* REFINED OVERLAPPING SPEAKERS DESIGN */
   .speakers-section { padding: 40px 24px; background: var(--light-gray); }
   .speakers-grid { display: flex; flex-direction: column; gap: 32px; }
   
@@ -129,9 +105,8 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     width: 100%;
   }
 
-  /* Improved Circle Visibility and Style */
   .speaker-circle { 
-    width: 140px; /* Increased size */
+    width: 140px; 
     height: 140px; 
     border-radius: 50%; 
     background: var(--white); 
@@ -139,11 +114,11 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     align-items: center; 
     justify-content: center; 
     flex-shrink: 0; 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Deeper shadow */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
     overflow: hidden;
     position: relative;
-    z-index: 2; /* Box ke upar dikhega */
-    border: 4px solid var(--gold); /* NEW Defined Gold Border */
+    z-index: 2; 
+    border: 4px solid var(--gold); 
   }
   .speaker-circle img {
     width: 100%;
@@ -151,7 +126,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     object-fit: cover;
   }
 
-  /* Thicker and Premium Speaker Card */
   .speaker-box { 
     background: var(--white); 
     border-radius: 12px; 
@@ -162,12 +136,11 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.05); /* Premium Card Shadow */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05); 
     position: relative;
     overflow: hidden;
   }
 
-  /* Decorative Thicker Colored Border (Red Accent) */
   .speaker-box::before {
     content: '';
     position: absolute;
@@ -177,52 +150,48 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     background: var(--red);
   }
 
-  /* 🔴 Dr. Nilesh Card (Left Layout) */
   .layout-left .speaker-box {
-    margin-left: -60px; /* More Overlap */
-    padding-left: 80px; /* Details start further to the right */
+    margin-left: -60px; 
+    padding-left: 80px; 
     text-align: left;
-    border-top-left-radius: 6px; /* Define shape nicely */
+    border-top-left-radius: 6px; 
     border-bottom-left-radius: 6px;
   }
   .layout-left .speaker-box::before { left: 0; }
 
-  /* 🟢 Bhupendra Sir Card (Right Layout) */
   .layout-right .speaker-box {
-    margin-right: -60px; /* More Overlap */
-    padding-right: 80px; /* Details finish earlier before right circle */
+    margin-right: -60px; 
+    padding-right: 80px; 
     text-align: right;
-    border-top-right-radius: 6px; /* Define shape nicely */
+    border-top-right-radius: 6px; 
     border-bottom-right-radius: 6px;
   }
   .layout-right .speaker-box::before { right: 0; }
 
-  /* Enhanced Text Visibility */
   .speaker-name { 
     font-family: 'Playfair Display', serif; 
-    font-size: 20px; /* Larger Name */
-    font-weight: 900; /* Extra Bold */
-    color: var(--black); /* Max Contrast */
+    font-size: 20px; 
+    font-weight: 900; 
+    color: var(--black); 
     margin-bottom: 4px; 
   }
   
   .speaker-title { 
-    font-size: 13px; /* Larger Title */
+    font-size: 13px; 
     color: var(--red); 
-    font-weight: 700; /* Thicker Title */
+    font-weight: 700; 
     text-transform: uppercase; 
     letter-spacing: 0.05em; 
     margin-bottom: 8px; 
   }
   
   .speaker-bio { 
-    font-size: 13px; /* Slightly larger text for visibility */
-    color: var(--text); /* Max contrast for bio */
-    line-height: 1.6; /* Better leading for reading */
-    font-weight: 400; /* Regular DM Sans */
+    font-size: 13px; 
+    color: var(--text); 
+    line-height: 1.6; 
+    font-weight: 400; 
   }
 
-  /* Responsive fixes for small mobile screens */
   @media (max-width: 480px) {
     .speaker-circle { width: 110px; height: 110px; }
     .layout-left .speaker-box { margin-left: -55px; padding-left: 65px; }
@@ -230,15 +199,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     .speaker-name { font-size: 18px; }
     .speaker-bio { font-size: 12px; }
   }
-  /* ======================================= */
-
-  /* ALERT SECTION */
-  .alert-section { background: var(--red); padding: 40px 24px; text-align: center; color: white; }
-  .alert-icon { font-size: 48px; margin-bottom: 16px; }
-  .alert-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; margin-bottom: 12px; line-height: 1.2; }
-  .alert-body { font-size: 15px; opacity: 0.9; margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto; }
-  .btn-white { background: white; color: var(--red); border: none; padding: 18px 24px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; text-align: center; text-decoration: none; display: block; transition: all 0.2s; margin-bottom: 12px; }
-  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
 
   /* DATE STRIP */
   .date-strip { background: var(--text); padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -248,8 +208,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .date-month { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.9; }
   .date-text-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
   .date-text-value { font-size: 15px; color: white; font-weight: 600; line-height: 1.4; }
-
-  /* FREE BADGE */
   .free-badge { background: var(--red); color: white; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; flex-shrink: 0; }
 
   /* FOOTER */
@@ -275,7 +233,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .sticky-btn { background: var(--red); color: white; border: none; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; white-space: nowrap; flex-shrink: 0; text-decoration: none; display: flex; align-items: center; }
   .spacer { height: 80px; }
 
-  /* SYMPTOMS ROW */
+  /* SYMPTOMS */
   .symptoms-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
   .symptom-chip { background: white; border: 1px solid #FFD0D0; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; color: var(--text); }
   .symptom-icon { font-size: 20px; flex-shrink: 0; }
@@ -295,7 +253,6 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .ticket-option:hover { border-color: var(--red); }
   .ticket-option.vip { background: var(--off-white); }
   
-  /* SELECTED STATE CSS */
   .ticket-option.selected { border-color: var(--red); background: #FFF0F0; border-width: 2px; box-shadow: 0 4px 12px rgba(196,30,42,0.15); }
   .ticket-option.selected::after { content: '✓'; position: absolute; top: 16px; right: 16px; width: 24px; height: 24px; background: var(--red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; }
   
@@ -306,23 +263,16 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   .ticket-features li::before { content: '✓'; color: var(--red); font-weight: bold; }
   .popular-badge { position: absolute; top: 0; right: 0; background: var(--red); color: white; font-size: 10px; font-weight: 700; padding: 6px 12px; border-bottom-left-radius: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
 
-  /* MODAL FINAL SUBMIT BUTTON */
   .modal-submit-btn { width: 100%; background: var(--red); color: white; border: none; padding: 18px; border-radius: 8px; font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.2s; margin-top: 20px; }
   .modal-submit-btn:disabled { background: #D1D5DB; cursor: not-allowed; color: #6B7280; }
   .modal-submit-btn:not(:disabled):hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,30,42,0.3); }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
 </style>
 </head>
 <body>
 
 <div class="ticker">
   <span class="ticker-inner">
-    🔴 ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 Morning 9 AM  &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp; ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp;
+    🔴 ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 (9 AM to 10 AM) &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp; ONLY ₹499 &nbsp;•&nbsp; June 13, 2026 (9 AM to 10 AM) &nbsp;•&nbsp; Nagpur &nbsp;•&nbsp; Blood Test Included &nbsp;•&nbsp; 1 Hour Program &nbsp;•&nbsp; Limited Seats &nbsp;•&nbsp; 38% Indians Have Fatty Liver &nbsp;•&nbsp; Book Now &nbsp;•&nbsp;
   </span>
 </div>
 
@@ -334,7 +284,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 <div class="hero-body">
   <div class="hero-label">
     <div class="pulse-dot"></div>
-    Nagpur &nbsp;•&nbsp; June 13, 2026
+    Nagpur &nbsp;•&nbsp; June 13, 2026 (9 AM to 10 AM)
   </div>
 
   <h1 class="hero-headline">
@@ -344,7 +294,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   </h1>
 
   <p class="hero-sub">
-    38% of Indians have Fatty Liver  and most have no symptoms. Join Nagpur's first Liver Awareness Program. Get tested. Get educated. Get answers. All for just <strong style="color:var(--red);">₹499</strong>.
+    38% of Indians have Fatty Liver — and most have no symptoms. Join Nagpur's first Liver Awareness Program. Get tested. Get educated. Get answers. All for just <strong style="color:var(--red);">₹499</strong>.
   </p>
 
   <div class="stats-row">
@@ -365,7 +315,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <div class="cta-hero">
     <a href="#register" class="btn-primary">🩸 Book My Seat — Only ₹499</a>
     <a href="https://wa.me/91XXXXXXXXXX" class="btn-secondary">💬 WhatsApp to Book</a>
-    <div class="seats-note">⚡ Only Few seats available — filling fast</div>
+    <div class="seats-note">⚡ Only few seats available — filling fast</div>
   </div>
 </div>
 
@@ -379,7 +329,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     </div>
     <div>
       <div class="date-text-label">Event Details</div>
-      <div class="date-text-value">Saturday, 2026<br>9 AM to 10 AM <br>1 Hour Program</div>
+      <div class="date-text-value">Saturday, 2026<br>9 AM to 10 AM (1 Hour Program)</div>
     </div>
   </div>
   <div class="free-badge">₹499 Only</div>
@@ -400,7 +350,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   </div>
   <div class="urgency-bar">
     <div class="urgency-icon">⚠️</div>
-    <div class="urgency-text">These are early signs of <strong>Fatty Liver</strong>. Ignored for years, fatty liver leads to cirrhosis, liver failure, and cancer. <strong>Get tested — for free — on June 13.</strong></div>
+    <div class="urgency-text">These are early signs of <strong>Fatty Liver</strong>. Ignored for years, fatty liver leads to cirrhosis, liver failure, and cancer. <strong>Get tested — for free — on June 13 (9 AM to 10 AM).</strong></div>
   </div>
 </div>
 
@@ -432,7 +382,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     <div class="event-card-full-icon">💎</div>
     <div>
       <div class="event-card-full-title">All This in Just ₹499</div>
-      <div class="event-card-full-sub">Blood Test (worth ₹800) + Expert Session + Diet Plan + Supplement Guide everything included in one ticket.</div>
+      <div class="event-card-full-sub">Blood Test (worth ₹800) + Expert Session + Diet Plan + Supplement Guide + Livology Sample Pack — everything included in one ticket.</div>
     </div>
   </div>
 </div>
@@ -465,13 +415,11 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="speaker-circle">
-        <img src="https://assets.cdn.filesafe.space/KnyHeMyBCYAkBFoqVANO/media/690c564bbadab90912303024.png" alt="Bhupendra Goud">
+        <img src="https://cdn.shopify.com/s/files/1/0989/4215/7102/files/bg_profile_2.png?v=1778164220" alt="Bhupendra Goud">
       </div>
     </div>
-  </div>
-</div>
- 
-  <div class="speaker-container layout-left">
+
+    <div class="speaker-container layout-left">
       <div class="speaker-circle">
         <img src="https://assets.cdn.filesafe.space/P9wyHqsTpu2ZuSZEKUMf/media/6a0ec045ca9579c76bb2027c.png" alt="Expert Name">
       </div>
@@ -481,10 +429,12 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
         <div class="speaker-bio">Renowned Pathology Expert specializing in advanced diagnostic testing, blood analysis, and liver health screenings. </div>
       </div>
     </div>
+  </div>
+</div>
 
 <div class="form-section" id="register">
   <h2 class="form-title">Book Your Seat</h2>
-  <p class="form-sub">Blood Test Included • 1 Hour Program • June 13, 2026 • Nagpur</p>
+  <p class="form-sub">Blood Test Included • 9 AM to 10 AM • June 13, 2026 • Nagpur</p>
 
   <div class="form-group">
     <input type="text" id="fullName" class="form-input" placeholder="Your Full Name *" />
@@ -513,16 +463,13 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
   <button class="form-submit" onclick="handleRegister()">
     ✅ Proceed to Book
   </button>
-
-  <p style="font-size:11px; color:var(--gray); text-align:center; margin-top:12px; line-height:1.5;">
-  </p>
 </div>
 
 <footer>
   <div class="footer-brand">LIVOLOGY by ArogyaVeda</div>
-  <div class="footer-text">Aarogyaveda Nutriscience & Wellness Foods Pvt. Ltd.</div>
-  <div style="margin-top:8px; font-size:11px; color:#D1D5DB;">
-    
+  <div class="footer-text">Aarogyaveda Nutriscience & Wellness Foods Pvt. Ltd. • Amravati, Maharashtra</div>
+  <div style="margin-top:8px; font-size:11px; color:#D1DDB;">
+    Nagpur, June 13, 2026.
   </div>
 </footer>
 
@@ -530,12 +477,13 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 
 <div class="sticky-cta">
   <div class="sticky-text">
-    <strong>June 13 — Blood Test Included 🩸</strong>
+    <strong>June 13 (9 AM to 10 AM) — Blood Test Included 🩸</strong>
     Only a few seats left
   </div>
   <a href="#register" class="sticky-btn">Book Now</a>
 </div>
 
+<!-- MODAL / POPUP -->
 <div class="modal-overlay" id="ticketModal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()">×</button>
@@ -547,7 +495,7 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
       <div class="ticket-name">General Pass</div>
       <ul class="ticket-features">
         <li>Blood Test SGPT and SGOT </li>
-        <li>1 Hour Expert Education Session</li>
+        <li>1 Hour Expert Education Session (9 AM - 10 AM)</li>
         <li>General Seating Area</li>
       </ul>
     </div>
@@ -574,6 +522,10 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
 
 <script>
   let chosenTicketType = "";
+
+  // 🔗 PLAN KE MUTABIK APNE LINKS YAHAN UPDATE KAREN
+  const link499 = "https://rzp.io/rzp/6t5Epa6p"; 
+  const link999 = "https://rzp.io/rzp/cnr6cOp";
 
   function handleRegister() {
     const inputs = document.querySelectorAll('.form-input');
@@ -638,7 +590,8 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
     modalBtn.textContent = '⏳ Processing...';
     modalBtn.disabled = true;
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyKzYdfzmr5VJmcmHE1RugAQJZytF-ekIVXXehyGJB2yaDQG-J1Yar-aOyCTbkN8_bi/exec'; 
+    // Google Apps Script URL (Jahan data save hoga)
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwnCrGhGHyOACjTLe2JFEzDXLuXj2jvygX9qO4CE3RnzSWM_NAsVe4dOC1Ajj5R5H8l/exec'; 
 
     const formData = new FormData();
     formData.append('Name', document.getElementById('fullName').value);
@@ -658,11 +611,19 @@ src="https://www.facebook.com/tr?id=1944355549545451&ev=PageView&noscript=1"
           });
         }
         
+        modalBtn.textContent = '🎉 Redirecting...';
         closeModal(); 
         
-        mainPageBtn.textContent = '🎉 Our team will contact you on soon!';
+        mainPageBtn.textContent = '🎉 Processing Payment...';
         mainPageBtn.style.background = '#16A34A';
         mainPageBtn.disabled = true;
+
+        // Plan select karne ke aadhar par sahi link par redirect karega
+        if (chosenTicketType.includes('VIP')) {
+          window.location.href = link999;
+        } else {
+          window.location.href = link499;
+        }
       })
       .catch(error => {
         console.error('Error!', error.message);
